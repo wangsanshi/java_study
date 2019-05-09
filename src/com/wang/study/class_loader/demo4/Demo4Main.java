@@ -1,4 +1,4 @@
-package com.wang.study.class_load.Demo4;
+package com.wang.study.class_loader.demo4;
 
 /**
  * 本示例的运行结果如下：

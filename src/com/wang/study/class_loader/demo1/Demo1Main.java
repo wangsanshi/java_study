@@ -1,4 +1,4 @@
-package com.wang.study.class_load.demo1;
+package com.wang.study.class_loader.demo1;
 
 /**
  * 测试Java中的类加载机制，本案例中使用的类分别为：
@@ -80,7 +80,7 @@ package com.wang.study.class_load.demo1;
  *     初始化一个类，那么只会有一个线程去执行这个类的<clinit>方法，其他线程都需要阻塞等待，
  *     直到活动线程执行<clinit>方法完毕。如果在一个类的<clinit>方法中有耗时很长的操作，
  *     就可能造成多个线程阻塞，在实际应用中这种阻塞往往是隐藏的，具体可参考以下示例：
- *     @see com.wang.study.class_load.demo2.Demo2Main
+ *     @see com.wang.study.class_loader.demo2.Demo2Main
  */
 public class Demo1Main {
 

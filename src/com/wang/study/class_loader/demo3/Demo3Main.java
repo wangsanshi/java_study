@@ -1,4 +1,4 @@
-package com.wang.study.class_load.demo3;
+package com.wang.study.class_loader.demo3;
 
 /**
  * 通过定义数组来引用类，和调用类中常量来引用类(常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类)

@@ -1,4 +1,4 @@
-package com.wang.study.class_load.demo2;
+package com.wang.study.class_loader.demo2;
 
 /**
  * 测试多线程同时去加载类的情况

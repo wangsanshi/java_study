@@ -1,4 +1,4 @@
-package com.wang.study.class_load.demo1;
+package com.wang.study.class_loader.demo1;
 
 public class SuperClass  extends SSClass{
     public static int value = 123;
