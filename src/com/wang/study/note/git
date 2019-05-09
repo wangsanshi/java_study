@@ -1,0 +1,6 @@
+1、执行 git push origin master 时若报以下错误：
+   ! [rejected]        master -> master (fetch first)
+   error: failed to push some refs to 'git@github.com:xxx'
+
+   其原因是远程仓库已经有了一部分新的代码，不允许直接将本地代码推上去，可以使用以下命令解决：
+   git pull --rebase origin master

@@ -1,0 +1,15 @@
+Java IO
+
+    Java IO操作主要指的是使用Java进行输入、输出操作，Java中所有的操作类都存放在java.io包中。
+在整个java.io包中最重要的是5个类和一个接口，5个类分别是File、OutputStream、InputStream、
+Writer、Reader；一个接口指的是Serializable。
+
+一、使用File类操作文件；
+
+二、使用RandomAccessFile类对文件进行读写操作；
+
+三、使用字节流和字符流对文件进行操作，其主要步骤如下：
+    1、使用File类打开一个文件
+    2、通过字节流或字符流的子类指定输出的位置；
+    3、进行读/写操作；
+    4、关闭输入/输出流。
