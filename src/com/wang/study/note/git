@@ -1,3 +1,58 @@
+git学习资料：http://iissnan.com/progit/html/zh/ch1_5.html
+
+一、起步
+
+1.配置用户信息，每次git提交时都会引用这两条信息，说明是谁提交了更新。
+git config --global user.name "xxx"
+git config --global user.email "xxx"
+
+2.配置默认使用的文本编辑器，一般为Vi或Vim。如果你有其他偏好，比如Emacs，可以设置：
+git config --global core.editor emacs
+
+3.差异分析工具，比如要改用vimdiff的话：
+git config --global merge.tool vimdiff
+
+4.查看配置信息
+git config --list
+
+二、基础
+
+1.在工作目录初始化新仓库:
+git init
+对文件进行跟踪：
+git add *.c
+git add README
+git commit -m "initial project version"
+
+2.从现有仓库克隆
+git clone git://github.com/schacon/grit.git
+若在克隆的时候，需自定义新建项目的名称，则使用：
+git clone git://github.com/schacon/grit.git mygrit
+
+3.检查当前文件状态
+git status
+
+4.忽略某些文件.gitignore
+# 此为注释 – 将被 Git 忽略
+# 忽略所有 .a 结尾的文件
+*.a
+# 但 lib.a 除外
+!lib.a
+# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+/TODO
+# 忽略 build/ 目录下的所有文件
+build/
+# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+doc/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt
+
+5.查看已暂存和未暂存的更新
+git diff  (此命令比较的时工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容)
+git diff --cached (查看已经暂存起来的文件和上次提交时的快照之间的差异)
+
+
+
 1、执行 git push origin master 时若报以下错误：
    ! [rejected]        master -> master (fetch first)
    error: failed to push some refs to 'git@github.com:xxx'
