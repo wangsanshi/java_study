@@ -70,6 +70,70 @@ git log -p -2                  // -p显示每次提交的内容差异，-2显示
 10.修改最后一次提交
 git commit --amend             //有时提交完了才发现漏掉几个文件没有加，或者提交信息卸错，想要撤消刚刚的提交操作
 
+11.取消已经暂存的文件
+git reset HEAD <file>
+
+12.取消对文件的修改
+git checkout -- <file>
+
+13.查看当前的远程库
+git remote
+git remote -v                  // -v表示显示对应的克隆地址
+
+14.添加远程仓库
+git remote add [shortname] [url]   //shortname表示可以指定一个简单的名字
+
+15.从远程仓库抓取数据
+git fetch [remote-name]
+
+16.推送数据到远程仓库
+git push [remote-name] [branch-name]
+例如：
+git push origin master                //将本地的master分支推送到origin服务器上
+
+17.查看远程仓库信息
+git remote show [remote-name]
+例如：
+git remote show origin                //查看克隆的origin仓库的信息
+
+18.远程仓库的删除和重命名
+git remote rename pv paul             //修改某个远程仓库在本地的简称，比如把pb修改未paul
+git remote rm paul                    //移除远程仓库
+
+19.显示已有的标签
+git tag
+
+20.含附注的标签
+git tag -a v1.4 -m "version 1.4"      //-a 指定标签名称，-m 指定标签说明
+git show v1.4                         //查看对应标签的版本信息
+
+21.签署标签
+如果你有自己的私钥，还可以用GPG来签署标签
+git tag -s v1.5 -m "version 1.5"
+
+22.轻量级标签
+git tag v1.6
+
+23.验证标签
+git tag -v v1.5
+
+24.后期加注标签
+$ git log --pretty=oneline
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+a6b4c97498bd301d84096da251c98a07c7723e65 beginning write support
+0d52aaab4479697da7686c15f77a3d64d9165190 one more thing
+6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'
+0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc added a commit function
+
+$ git tag -a v1.7 6d52a2                   //对以前的某次提交加注标签
+
+25.分享标签
+默认情况下,git push 并不会把标签传送到远程服务器上，只有通过显示命令才能分享标签到远程仓库，命令如下
+git push origin [tagname]
+
+三、分支
+
+
 
 1、执行 git push origin master 时若报以下错误：
    ! [rejected]        master -> master (fetch first)
