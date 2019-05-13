@@ -51,6 +51,24 @@ doc/**/*.txt
 git diff  (此命令比较的时工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容)
 git diff --cached (查看已经暂存起来的文件和上次提交时的快照之间的差异)
 
+6.提交更新
+git commit
+git commit -m "xxx"
+git commit -a                   //跳过git add步骤
+
+7.移除文件
+git rm grit.gemspec            //从暂存区域移除并删除文件
+git rm --cached readme.txt     //把文件从git仓库中删除，但仍保留在当前工作目录中
+
+8.修改文件名称
+git mv file_from file_to
+
+9.查看提交历史
+git log
+git log -p -2                  // -p显示每次提交的内容差异，-2显示最近的两次更新
+
+10.修改最后一次提交
+git commit --amend             //有时提交完了才发现漏掉几个文件没有加，或者提交信息卸错，想要撤消刚刚的提交操作
 
 
 1、执行 git push origin master 时若报以下错误：
