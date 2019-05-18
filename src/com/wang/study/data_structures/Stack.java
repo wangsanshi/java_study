@@ -1,7 +1,7 @@
 package com.wang.study.data_structures;
 
 /**
- * 栈的实现
+ * 栈的实现，先进后出
  */
 @SuppressWarnings("all")
 public class Stack {
@@ -10,8 +10,8 @@ public class Stack {
     private int top;
 
     public Stack(int maxSize) {
-        if (maxSize < 0) {
-            throw new IllegalArgumentException("stack maxSize must > 0.");
+        if (maxSize <= 0) {
+            throw new IllegalArgumentException("Stack maxSize must > 0.");
         }
 
         this.maxSize = maxSize;
@@ -40,7 +40,7 @@ public class Stack {
      */
     public void push(int element) {
         if (isFull()) {
-            throw new IllegalArgumentException("stack is full.");
+            throw new IllegalArgumentException("Stack is full.");
         }
 
         stackArray[++top] = element;
@@ -51,7 +51,7 @@ public class Stack {
      */
     public int pop() {
         if (top < 0) {
-            throw new IllegalArgumentException("stack is empty.");
+            throw new IllegalArgumentException("Stack is empty.");
         }
 
         return stackArray[top--];
@@ -62,7 +62,7 @@ public class Stack {
      */
     public int peek() {
         if (top < 0) {
-            throw new IllegalArgumentException("stack is empty.");
+            throw new IllegalArgumentException("Stack is empty.");
         }
 
         return stackArray[top];
