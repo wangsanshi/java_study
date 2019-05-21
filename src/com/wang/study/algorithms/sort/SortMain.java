@@ -1,4 +1,4 @@
-package com.wang.study.sort;
+package com.wang.study.algorithms.sort;
 
 /**
  * 作者：wanglei on 2019/4/24.

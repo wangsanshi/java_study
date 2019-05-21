@@ -66,7 +66,7 @@ public class Queue {
      */
     public int peek() {
         if (isEmpty()) {
-            throw new IllegalArgumentException("Quwuw is empty , can not peek element.");
+            throw new IllegalArgumentException("Queue is empty , can not peek element.");
         }
 
         return queueArray[0];
@@ -112,7 +112,7 @@ public class Queue {
         System.out.println("remove() = " + queue.remove());        // remove() = 5
         System.out.println("isEmpty() = " + queue.isEmpty());      // isEmpty() = true
 
-//        System.out.println("remove() = " + queue.remove());      // java.lang.IllegalArgumentException: Quwuw is empty , can not remove element.
+//        System.out.println("remove() = " + queue.remove());      // java.lang.IllegalArgumentException: Queue is empty , can not remove element.
     }
 
 }
