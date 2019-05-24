@@ -34,6 +34,37 @@ public class SingleLinkedList {
     }
 
     /**
+     * 查看链表头元素
+     */
+    public int printFrist() {
+        if (frist == null) {
+            throw new IllegalArgumentException("SingleLinkedList is empty , can not print frist element.");
+        }
+
+        return frist.data;
+    }
+
+    /**
+     * 查看链表尾元素
+     */
+    public int printLast() {
+        if (frist == null) {
+            throw new IllegalArgumentException("SingleLinkedList is empty , can not print last element.");
+        }
+
+        Node currentNode = frist;
+        while (true) {
+            if (currentNode.next == null) {
+                break;
+            } else {
+                currentNode = currentNode.next;
+            }
+        }
+
+        return currentNode.data;
+    }
+
+    /**
      * 从单链表尾添加元素
      */
     public void addLast(int data) {

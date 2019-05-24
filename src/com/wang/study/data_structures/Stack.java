@@ -1,7 +1,7 @@
 package com.wang.study.data_structures;
 
 /**
- * 栈的实现，先进后出
+ * 栈的实现，先进后出（用数组实现）
  */
 @SuppressWarnings("all")
 public class Stack {
